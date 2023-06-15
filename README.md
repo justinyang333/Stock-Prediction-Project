@@ -38,8 +38,7 @@ In order to quantify our project results, we plan to employ the following metric
 
 ## Project Timeline
 
-
-
+![Project Operations Timeline](assets/timeline.png)
 
 ---
 
