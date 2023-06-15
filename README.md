@@ -4,13 +4,11 @@
 
 It's very difficult for hedge funds and day traders to outperform the market (i.e. stable index funds) over a long time. Stock market public accessibility is increasing with technologies like Robinhood, TD Ameritrade, Bitwallet, etc becoming more relevant. Accurate predictions of the stock market can assist in education and help advise important financial planning and decisions for companies and individuals alike.
 
-
 ---
 
 ## Problem Definition
 
 Our team seeks to outperform the market (index funds: S&P 500, NASDAQ, etc.). We will implement the most recent methods of decision tree day-by-day to determine which stocks to buy or sell, given a principal amount of money, that maximizes profit and minimizes risk.
-
 
 ---
 
@@ -26,9 +24,6 @@ For our dataset, we are making use of Marketdata’s API to collect daily histor
 **XGBoost**: As an option to further the Random Forest Regression, we will also consider using Extreme Gradient Boosting.  Due to the fact our data will be a time series, the sequential training XGBoost provides will help to more accurately extrapolate and forecast the trends in our data.  XGBoost has a python package from the developers **xgboost**
 
 **Naive Bayes**: Assumes the stock’s features are conditionally independent and using Bayes Theorem, predicts the direction of stock price movements to suggest which stocks we may purchase or sell. We can use a variety of libraries to accomplish this, including **sci-kit-learn**.
-
-
-
 
 ---
 
