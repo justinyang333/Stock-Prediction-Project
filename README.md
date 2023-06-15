@@ -22,7 +22,7 @@ For our dataset, we are making use of Marketdata’s API to collect daily histor
 For our model we will consider:
 - **Random Forest Regression**: We would utilize an ensemble of decision trees, each with their own subset of (financial) features and samples (of stocks), to predict which stocks we should purchase and sell. We anticipate this method will be effective in capturing feature relationships and reducing overfitting. 
 
-- **XGBoost**: As an option to further the Random Forest Regression, we will also consider using Extreme Gradient Boosting.  Due to the fact our data will be a time series, the sequential training XGBoost provides will help to more accurately extrapolate and forecast the trends in our data.  XGBoost has a python package from the developers **xgboost**.
+- **XGBoost**: As an option to further the Random Forest Regression, we will also consider using Extreme Gradient Boosting.  Due to the fact our data will be a time series, the sequential training XGBoost provides will help to more accurately extrapolate and forecast the trends in our data.  XGBoost has a python package from the developers **xgboost** [1].
 
 - **Naive Bayes**: Assumes the stock’s features are conditionally independent and using Bayes Theorem, predicts the direction of stock price movements to suggest which stocks we may purchase or sell. We can use a variety of libraries to accomplish this, including **sci-kit-learn**.
 
@@ -32,7 +32,7 @@ To provide whichever model we decide to use with quality data, we will employ se
 
 ## Potential Results and Discussion
 
-In order to quantify our project results, we plan to employ the following metrics in order to fully represent our findings. When employing a regression model of Random Forest, the following metrics such as mean squared error, root mean squared error and R^2 would prove useful in forming performance benchmarks of our implementation. For a Naïve Bayes classification approach, “accuracy and f-measure are used” [2] for creating performance benchmarks on the status of this approach.
+In order to quantify our project results, we plan to employ the following metrics in order to fully represent our findings. When employing a regression model of Random Forest, the following metrics such as mean squared error, root mean squared error and R^2 would prove useful in forming performance benchmarks of our implementation [3]. For a Naïve Bayes classification approach, “accuracy and f-measure are used” [2] for creating performance benchmarks on the status of this approach.
 
 ---
 
