@@ -2,14 +2,14 @@
 
 ## Project Introduction and Background
 
-
+It's very difficult for hedge funds and day traders to outperform the market (i.e. stable index funds) over a long time. Stock market accessibility is increasing with technologies like Robinhood, TD Ameritrade, Bitwallet, etc. Accurate predictions of the stock market can assist in education and help advise important financial planning and decisions for companies and individuals.
 
 
 ---
 
 ## Problem Definition
 
-
+Our team seeks to outperform the market (index funds: S&P 500, NASDAQ, etc.). We will implement the most recent methods of decision tree day-by-day to determine which stocks to buy or sell, given a principal amount of money, that maximizes profit and minimizes risk.
 
 
 ---
@@ -31,7 +31,7 @@
 
 ## Potential Results and Discussion
 
-
+In order to quantify our project results, we plan to employ the following metrics in order to fully represent our findings. When employing a regression model of random forest, the following metrics such as mean squared error, root mean squared error and R^2 would prove useful in forming performance benchmarks of our implementation. For a naïve Bayes classification approach, performance metrics that could be used include those such as accuracy, confusion matrices, F1 Score and precision.
 
 
 ---
