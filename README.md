@@ -32,7 +32,7 @@ To provide whichever model we decide to use with quality data, we will employ se
 
 ## Potential Results and Discussion
 
-In order to quantify our project results, we plan to employ the following metrics in order to fully represent our findings. When employing a regression model of random forest, the following metrics such as mean squared error, root mean squared error and R^2 would prove useful in forming performance benchmarks of our implementation. For a naïve Bayes classification approach, performance metrics that could be used include those such as accuracy, confusion matrices, F1 Score and precision.
+In order to quantify our project results, we plan to employ the following metrics in order to fully represent our findings. When employing a regression model of Random Forest, the following metrics such as mean squared error, root mean squared error and R^2 would prove useful in forming performance benchmarks of our implementation. For a Naïve Bayes classification approach, “accuracy and f-measure are used” [2] for creating performance benchmarks on the status of this approach.
 
 ---
 
