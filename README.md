@@ -65,4 +65,5 @@ In order to quantify our project results, we plan to employ the following metric
 
 ## Checkpoint
 
+For team checkpoints, we meet weekly to review the progress of current phases and completed phases.  This aids in aligning our team on project goals and properly distributing work among team members.  These project meetings will occur until the project has reached completion at the end of the term.
 
