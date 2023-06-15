@@ -1,6 +1,6 @@
 # Machine Learning: Group 6 - Project Proposal
 
-## Team Members: Curran Myers, Tilman Gromme, Braden Dunaway, Bryce McNealey, Justin Yang
+# Team Members: Curran Myers, Tilman Gromme, Braden Dunaway, Bryce McNealey, Justin Yang
 
 ## Project Introduction and Background
 
