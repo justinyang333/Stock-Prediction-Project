@@ -1,2 +1,2 @@
 log-format: "%(asctime)s [%(levelname)s]: %(message)s\n"
-log-date-format: "%m-%d-%y %H:%M:%s"
+log-date-format: "%m-%d-%y %H:%M:%S"

@@ -1,6 +1,7 @@
-# Sensitive information
+# Put Ignored files/directories here
 credentials.json
 .DS_Store
+data/
 
 
 # Byte-compiled / optimized / DLL files
