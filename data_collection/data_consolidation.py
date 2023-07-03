@@ -130,10 +130,19 @@ def join_csvs(path: str):
     df.to_csv("./dataset.csv")
 
 
+def data_time_window(dataset: pd.DataFrame):
+    dataset.drop(columns=["Unnamed: 0.1", "Unnamed: 0", "index"], inplace=True)
+    early_mask = pd.to_datetime(dataset["Date"]) >= datetime.strptime("02/28/2009", "%m/%d/%Y")
+    late_mask = pd.to_datetime(dataset["Date"]) < datetime.strptime("03/01/2020", "%m/%d/%Y")
+    filtered_data = dataset[late_mask & early_mask]
+    filtered_data.reset_index(inplace=True)
+    filtered_data.index = filtered_data["Date"]
+    filtered_data.drop(columns=["index"], inplace=True)
+    return filtered_data
 
 if __name__ == "__main__":
     setup_config()
-    
+
     
     
     
