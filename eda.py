@@ -82,8 +82,15 @@ def plot_sector_distribution(df: pd.DataFrame):
 
 def plot_sector_value_distribution(df: pd.DataFrame):
     sector_group = df.groupby(['Sector', 'Symbol']).agg({'Open': 'mean'}).reset_index()
-    return sns.displot(sector_group, x='Open', hue='Sector', kind='kde', fill=True, height=10, aspect=1.5).set(title='Sector Distribution of Open Prices ($)', xlabel='Average Stock Open Price ($)', ylabel='Density')
+    return sns.displot(sector_group, x='Open', hue='Sector', kind='kde', fill=True, height=10, aspect=1.5).set(title='Sector Distribution of Mean Open Prices ($)', xlabel='Average Stock Open Price ($)', ylabel='Density')
 
+def create_daily_movements(df: pd.DataFrame):
+    symbol_groups = df.groupby('Symbol')
+    percent_changes = []
+    for symbol, group in symbol_groups:
+        print(symbol)
+        percent_changes.append(pd.DataFrame({symbol : group['Open'].pct_change().reset_index(drop=True)}))
+    return pd.concat(percent_changes, axis=1)
 
 if __name__ == '__main__':
     path = './data/unprocessed/'
