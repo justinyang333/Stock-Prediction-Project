@@ -57,7 +57,7 @@ We then performed some analysis on how the stocks were distributed among sectors
 <img src="./data/visualizations/sector_mean_open_kde.png" height=400 width=600>
 </center>
 <br></br>
-Lastly, we decided to do some noramlization of the data.  Using sklearn and numpy, we were able to create NxM arrays of the opening and closing prices each day in order to calculate the daily movements of a stock.  Below We show how we can use the normalizer to preprocess our data for the model.
+Lastly, we decided to do some noramlization of the data.  Using sklearn and numpy, we were able to create NxM arrays of the opening and closing prices each day in order to calculate the daily movements of a stock.  Below we show how we can use the normalizer to preprocess our data for the model.
 <br></br>
 <center><img src="./data/visualizations/pre_post_normalization.png" height=400 width=800></center>
 
