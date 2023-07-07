@@ -5,6 +5,9 @@ import seaborn as sns
 import os
 import plotly.express as px
 import json
+from sklearn.preprocessing import Normalizer
+from sklearn.pipeline import make_pipeline
+from sklearn.cluster import KMeans
 
 
 def plot_year_distribution(path: str):
@@ -77,25 +80,50 @@ def plot_open_boxes(unbounded: pd.DataFrame, bounded: pd.DataFrame):
 
 def plot_sector_distribution(df: pd.DataFrame):
     sector_group = df.groupby('Sector')['Symbol'].count() // 2769
-    return px.bar(sector_group, x=sector_group.index, y='Symbol', title='Sector Distribution of Stocks')
+    return px.bar(sector_group, x=sector_group.index, y='Symbol', title='Sector Distribution of Stocks', color=sector_group.index)
             
 
 def plot_sector_value_distribution(df: pd.DataFrame):
     sector_group = df.groupby(['Sector', 'Symbol']).agg({'Open': 'mean'}).reset_index()
     return sns.displot(sector_group, x='Open', hue='Sector', kind='kde', fill=True, height=10, aspect=1.5).set(title='Sector Distribution of Mean Open Prices ($)', xlabel='Average Stock Open Price ($)', ylabel='Density')
 
-def create_daily_movements(df: pd.DataFrame):
+def create_daily_movements(df: pd.DataFrame) -> np.ndarray:
     symbol_groups = df.groupby('Symbol')
-    percent_changes = []
+    daily_open_prices = []
+    daily_close_prices = []
     for symbol, group in symbol_groups:
-        print(symbol)
-        percent_changes.append(pd.DataFrame({symbol : group['Open'].pct_change().reset_index(drop=True)}))
-    return pd.concat(percent_changes, axis=1)
+        daily_open_prices.append(pd.DataFrame({symbol : group['Open'].reset_index(drop=True)}))
+        daily_close_prices.append(pd.DataFrame({symbol : group['Close'].reset_index(drop=True)}))
+    daily_open_prices = np.array(pd.concat(daily_open_prices, axis=1).dropna())
+    daily_close_prices = np.array(pd.concat(daily_close_prices, axis=1).dropna())
+    daily_movements = daily_close_prices.T - daily_open_prices.T
+    return daily_movements
+
+def plot_daily_movements(movements: np.ndarray):
+    fig, ax = plt.subplots(2, 1)
+    sns.lineplot(data=movements.T, dashes=False, linewidth=0.5, ax=ax[0], legend=False)
+    ax[0].set_title('Daily Stock Movements Before Normalizing')
+    normalizer = Normalizer()
+    normalized_movements = normalizer.fit_transform(movements.T)
+    sns.lineplot(data=normalized_movements, dashes=False, linewidth=0.5, ax=ax[1], legend=False)
+    ax[1].set_title('Daily Stock Movements After Normalizing')
+    ax[1].set(ylim=(-2, 2))
+    return fig, ax
+
+def cluster_stocks(movements: np.ndarray, symbols: list[str], n_clusters: int):
+    normalizer = Normalizer()
+    kmeans = KMeans(n_clusters=n_clusters, max_iter=10000)
+    pipeline = make_pipeline(normalizer, kmeans)
+    pipeline.fit(movements.T)
+    labels = pipeline.predict(movements.T)
+    assignments = pd.DataFrame({'Symbols': symbols, 'Assignments': labels})
+    return assignments
+    
 
 if __name__ == '__main__':
-    path = './data/unprocessed/'
-    # plot_year_distribution(path).show()
-    plot_data_viability(path)
+    data = pd.read_csv('./data/dataset_bounded.csv')
+    movements = create_daily_movements(data)
+    assignments = cluster_stocks(movements[np.random.choice(movements.shape[0], 50, replace=False)], data['Symbol'].unique(), 3)
     
             
     
