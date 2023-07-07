@@ -1,6 +1,7 @@
 # Put Ignored files/directories here
 credentials.json
 .DS_Store
+data/unprocessed
 
 
 # Byte-compiled / optimized / DLL files
