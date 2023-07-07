@@ -32,9 +32,35 @@ To provide whichever model we decide to use with quality data, we will employ se
 
 ---
 
-## Potential Results and Discussion
+## Results and Discussion
 
 In order to quantify our project results, we plan to employ the following metrics in order to fully represent our findings. When employing a regression model of Random Forest, the following metrics such as mean squared error, root mean squared error and R^2 would prove useful in forming performance benchmarks of our implementation [3]. For a Naïve Bayes classification approach, “accuracy and f-measure are used” [2] for creating performance benchmarks on the status of this approach.
+
+### Dataset Collection and Cleaning
+
+As stated earlier we used [Marketdata’s API](https://docs.marketdata.app/api) to collect information on numerous different stocks detailed by [NASDAQ’s Stock Sceener](https://www.nasdaq.com/market-activity/stocks/screener).  The data was gathered by making numerous HTTP GET requests and a response was recevied, which was then saved in JSON format.  If the response was empty or an error for no available data, it was not saved to alleviate preprocessing overhead.  Once all the stock data was gathered, we had received roughly 20 years worth of daily measures for thousands of different stocks.
+
+<center> <img src="./data/visualizations/stock_count_by_year.png" height=300 width=500> <img src="./data/visualizations/stock_completeness.png" height=300 width=500></center>
+
+We decided the the most "normal" selection of data would be from March 1st, 2009 through Feb 28th, 2020.  This would ideal train the model on the economy in a "normal" period uneffected by the 2008 housing crisis or the 2020 pandemic.  So, now all that was left to do was select all stocks that had completeness across the years and days within the year.  Even though a large portion of the data was not complete through the time range we selected, we still are left with a notable quantity of data for our base dataset. 
+
+### Exploratory Data Analysis
+
+In EDA, the goal was to better understand our data before doing any additional processing.  The first thing we did (knowing all NaN values had already been processed out) was generate some descriptive statistics on each stock by grouping them.  These statistics were stored in an excel sheet [here](./EDA/stock_group_stats.xlsx) for general viewing.  We realized that there were some stocks that were far too large or small to be included within the data.  So, we decided to bound the data from a minimum of 1 to a maximum of 500.
+<br></br>
+<center><img src="./data/visualizations/bounded_data_boxplot.png" height=400 width=600></center>
+<br></br>
+We then performed some analysis on how the stocks were distributed among sectors.  For risk assessment of a portfolio later, it is beneficial to not keep all investments in one sector as sectors can trend as a whole.  To gather some insights into this information, the naive solution was to plot the count of stocks present for each sector (see left).  We also used KDE to visualize the distribution of the average opening price for all stocks in the sector across the time time range (see right).  Together, we observed that out dataset does have a bias towards the finance and consumer discretionary sectors, but the relative maximum likelihood across sectors is fairly similar.
+<br></br>
+<center>
+<img src="./data/visualizations/dist_of_stock_by_sector.png" height=400 width=600>
+<img src="./data/visualizations/sector_mean_open_kde.png" height=400 width=600>
+</center>
+<br></br>
+Lastly, we decided to do some noramlization of the data.  Using sklearn and numpy, we were able to create NxM arrays of the opening and closing prices each day in order to calculate the daily movements of a stock.  Below We show how we can use the normalizer to preprocess our data for the model.
+<br></br>
+<center><img src="./data/visualizations/pre_post_normalization.png" height=400 width=800></center>
+
 
 ### Feature Engineering
 
