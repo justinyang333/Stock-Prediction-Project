@@ -36,6 +36,8 @@ To provide whichever model we decide to use with quality data, we will employ se
 
 In order to quantify our project results, we plan to employ the following metrics in order to fully represent our findings. When employing a regression model of Random Forest, the following metrics such as mean squared error, root mean squared error and R^2 would prove useful in forming performance benchmarks of our implementation [3]. For a Naïve Bayes classification approach, “accuracy and f-measure are used” [2] for creating performance benchmarks on the status of this approach.
 
+### Feature Engineering
+
 ---
 
 ## References
