@@ -63,7 +63,11 @@ Lastly, we decided to do some noramlization of the data.  Using sklearn and nump
 
 ### Supervised Learning Technique: XGBoost
 
-Our problem was addresssed using supervised regression machine learning techniques. This is demonstrated by the manner with which we supply both the stock features and our target prices. Our target values exist on a continuous, numerical scale (stock price, either close or open). Methods like random forest built on simplier regression by generating a decision tree of grouped feature sets, to determine a most effective, i.e. fit to the data model.  Using a subset of the initial data (no additional features) 
+Our problem was addresssed using supervised regression machine learning techniques. This is demonstrated by the manner with which we supply both the stock features and our target prices. Our target values exist on a continuous, numerical scale (stock price, either close or open). Methods like random forest built on simplier regression by generating a decision tree of grouped feature sets, to determine a most effective, i.e. fit to the data model.  Using a roughly 2-year subset of the initial data (no additional features), we used XGBoost to provide us with predictions and then evaluated the root mean squared error between the training and the test.
+
+<center><img src="./data/visualizations/xgb_rmse.png" height=400 width=800></center>
+
+As we increased the number of boost rounds, we saw a decline in the RMSE.  However, when evaluating over the full 10 year span, our RMSE increases dramatically.  This confirms our assumption that more features would be needed to accurately train the model and prevent overfitting.
 
 ### Feature Engineering
 
