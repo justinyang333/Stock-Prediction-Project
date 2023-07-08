@@ -67,14 +67,17 @@ def bound_data(data: pd.DataFrame, lower_bound: int, upper_bound: int):
 
 def plot_open_boxes(unbounded: pd.DataFrame, bounded: pd.DataFrame):
     fig, ax = plt.subplots(1, 2)
-    ax[0] = unbounded.plot(kind='box', y='Open', ax=ax[0])
+    
+    unbounded.plot(kind='box', y='Open', ax=ax[0])
     ax[0].set_title('Open Price Distribution Before Bounding')
     ax[0].set_xlabel('Open Price')
     ax[0].set_ylabel('Frequency')
-    ax[1] = bounded.plot(kind='box', y='Open', ax=ax[1])
+    
+    bounded.plot(kind='box', y='Open', ax=ax[1])
     ax[1].set_title('Open Price Distribution After Bounding')
     ax[1].set_xlabel('Open Price')
     ax[1].set_ylabel('Frequency')
+    
     return fig, ax
 
 
