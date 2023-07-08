@@ -78,7 +78,7 @@ Which drops any NaNs, infinite values, and converts our feature values to np.flo
 
 Further, it makes much sense to plot feature correlations and begin to explore their variance for their feasibility in actual machine learning models. Using seaborn, the heatmap of feature correlations was generated: 
 <br></br>
-<center><img src="./data/visualizations/feature.png" height=400 width=600></center>
+<center><img src="./data/visualizations/feature_correlations.png" height=400 width=600></center>
 <br></br>
 Note that High, Low, and Close appear correlated - we may therefore remove some to aid implementation. 
 
