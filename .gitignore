@@ -2,6 +2,7 @@
 credentials.json
 .DS_Store
 data/unprocessed
+xg_boost_testing.py
 
 
 # Byte-compiled / optimized / DLL files
