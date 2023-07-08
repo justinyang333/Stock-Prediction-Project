@@ -63,7 +63,7 @@ Lastly, we decided to do some noramlization of the data.  Using sklearn and nump
 
 ### Supervised Learning Technique
 
-Our problem space necessitated the usage of a supervised, regression machine learning technique. This can be demonstrated by the manner with which we supply both the features and targets that we intend to create a viable mapping from the data to the prediction.
+Our problem space necessitated the usage of a supervised, regression machine learning technique. This can be demonstrated by the manner with which we supply both the features and targets that we intend to create a viable mapping from the data to the prediction. In addition, we intend to create target values that exist on a continouos, numerical scale (stock price), which requires a regression task.
 
 ### Feature Engineering
 
