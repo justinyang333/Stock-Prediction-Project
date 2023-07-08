@@ -46,7 +46,7 @@ We decided the the most "normal" selection of data would be from March 1st, 2009
 
 ### Exploratory Data Analysis
 
-In EDA, the goal was to better understand our data before doing any additional processing.  The first thing we did (knowing all NaN values had already been processed out) was generate some descriptive statistics on each stock by grouping them.  These statistics were stored in an excel sheet [here](./EDA/stock_group_stats.xlsx) for general viewing.  We realized that there were some stocks that were far too large or small to be included within the data.  So, we decided to bound the data from a minimum of 1 to a maximum of 500.
+In EDA, the goal was to better understand our data before doing any additional processing.  The first thing we did (knowing all NaN values had already been processed out) was generate some descriptive statistics on each stock by grouping them.  We realized that there were some stocks that were far too large or small to be included within the data.  So, we decided to bound the data from a minimum of 1 to a maximum of 500.
 <br>
 <center><img src="./data/visualizations/bounded_data_boxplot.png" height=400 width=600></center>
 <br>
