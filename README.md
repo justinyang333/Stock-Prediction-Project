@@ -106,7 +106,8 @@ Note that High, Low, and Close appear correlated - we may therefore remove some 
 |       Task          |  Time Window  | Responsible Member(s) | Work Completed |
 |       :---:         |    :---:      |        :---:          |                |
 | Research            | 06/06 - 06/13 | All Members           | All members helped find sources, methods and papers.|
-| Proposal            | 06/13 - 06/16 | All Members           | The group met weekly to work on the proposal therefore all members contributed. Curran recorded the video and submitted for the team |
+| Proposal            | 06/13 - 06/16 | All Members           | The group met weekly to work on the proposal therefore all members contributed.
+                                                                recorded the video and submitted for the team |
 | Data Collection     | 06/16 - 06/24 | Braden                | Braden collected the dataset from the MarketData API. |
 | Exp. Data Analysis  | 06/19 - 06/26 | Braden                ||
 | Feature Engineering | 06/21 - 07/02 | Curran                ||
