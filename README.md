@@ -104,7 +104,7 @@ Note that High, Low, and Close appear correlated - we may therefore remove some 
 ## Work Contribution Table
 
 |       Task          |  Time Window  | Responsible Member(s) | Work Completed  |
-|       :---:         |    :---:      |        :---:          |                 |
+|       :---:         |    :---:      |        :---:          |       :--:      |
 | Research            | 06/06 - 06/13 | All Members           |                 |
 | Proposal            | 06/13 - 06/16 | All Members           |                 |
 | Data Collection     | 06/16 - 06/24 | Braden                |                 |
