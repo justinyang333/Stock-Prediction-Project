@@ -66,6 +66,8 @@ Lastly, we decided to do some noramlization of the data.  Using sklearn and nump
 
 We sought out to add additional features to our dataset, including highly recommended features for time series financial data. These features include logvolume, i.e. $`log(volume)`$, 10 and 30 day lagging *momentum*, which is determined using close price: $Close - Close_{10 days ago}$
 
+$\log(volume)$
+
 After doing so, The dataset required cleaning to remove the first 30 days of data, as they contained NaNs for our lagging features. 
 To clean this precautionarily, we defined the following function:
 ```
