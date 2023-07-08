@@ -61,6 +61,9 @@ Lastly, we decided to do some noramlization of the data.  Using sklearn and nump
 <br>
 <center><img src="./data/visualizations/pre_post_normalization.png" height=400 width=800></center>
 
+### Supervised Learning Technique
+
+Our problem space necessitated the usage of a supervised, regression machine learning technique. This can be demonstrated by the manner with which we supply both the features and targets that we intend to create a viable mapping from the data to the prediction.
 
 ### Feature Engineering
 
