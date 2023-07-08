@@ -47,18 +47,18 @@ We decided the the most "normal" selection of data would be from March 1st, 2009
 ### Exploratory Data Analysis
 
 In EDA, the goal was to better understand our data before doing any additional processing.  The first thing we did (knowing all NaN values had already been processed out) was generate some descriptive statistics on each stock by grouping them.  These statistics were stored in an excel sheet [here](./EDA/stock_group_stats.xlsx) for general viewing.  We realized that there were some stocks that were far too large or small to be included within the data.  So, we decided to bound the data from a minimum of 1 to a maximum of 500.
-<br></br>
+<br>
 <center><img src="./data/visualizations/bounded_data_boxplot.png" height=400 width=600></center>
-<br></br>
-We then performed some analysis on how the stocks were distributed among sectors.  For risk assessment of a portfolio later, it is beneficial to not keep all investments in one sector as sectors can trend as a whole.  To gather some insights into this information, the naive solution was to plot the count of stocks present for each sector (see left).  We also used KDE to visualize the distribution of the average opening price for all stocks in the sector across the time time range (see right).  Together, we observed that out dataset does have a bias towards the finance and consumer discretionary sectors, but the relative maximum likelihood across sectors is fairly similar.
-<br></br>
+<br>
+We then performed some analysis on how the stocks were distributed among sectors.  For risk assessment of a portfolio later, it is beneficial to not keep all investments in one sector as sectors can trend as a whole.  To gather some insights into this information, the naive solution was to plot the count of stocks present for each sector.  We also used KDE to visualize the distribution of the average opening price for all stocks in the sector across the time time range.  Together, we observed that out dataset does have a bias towards the finance and consumer discretionary sectors, but the relative maximum likelihood across sectors is fairly similar.
+<br>
 <center>
 <img src="./data/visualizations/dist_of_stock_by_sector.png" height=400 width=600>
 <img src="./data/visualizations/sector_mean_open_kde.png" height=400 width=600>
 </center>
-<br></br>
+<br>
 Lastly, we decided to do some noramlization of the data.  Using sklearn and numpy, we were able to create NxM arrays of the opening and closing prices each day in order to calculate the daily movements of a stock.  Below we show how we can use the normalizer to preprocess our data for the model.
-<br></br>
+<br>
 <center><img src="./data/visualizations/pre_post_normalization.png" height=400 width=800></center>
 
 
