@@ -61,9 +61,9 @@ Lastly, we decided to do some noramlization of the data.  Using sklearn and nump
 <br>
 <center><img src="./data/visualizations/pre_post_normalization.png" height=400 width=800></center>
 
-### Supervised Learning Technique
+### Supervised Learning Technique: XGBoost
 
-Our problem was addresssed using supervised regression machine learning techniques. This is demonstrated by the manner with which we supply both the stock features and our target prices. Our target values exist on a continuous, numerical scale (stock price, either close or open). Methods like random forest built on simplier regression by generating a decision tree of grouped feature sets, to determine a most effective, i.e. fit to the data model.
+Our problem was addresssed using supervised regression machine learning techniques. This is demonstrated by the manner with which we supply both the stock features and our target prices. Our target values exist on a continuous, numerical scale (stock price, either close or open). Methods like random forest built on simplier regression by generating a decision tree of grouped feature sets, to determine a most effective, i.e. fit to the data model.  Using a subset of the initial data (no additional features) 
 
 ### Feature Engineering
 
