@@ -105,8 +105,8 @@ Note that High, Low, and Close appear correlated - we may therefore remove some 
 
 |       Task          |  Time Window  | Responsible Member(s) | Work Completed  |
 |       :---:         |    :---:      |        :---:          |       :--:      |
-| Research            | 06/06 - 06/13 | All Members           |                 |
-| Proposal            | 06/13 - 06/16 | All Members           |                 |
+| Research            | 06/06 - 06/13 | All Members           | All members contributed at least one resource or paper the group discussed in our meetings.|
+| Proposal            | 06/13 - 06/16 | All Members           | All members contributed to the writing of the proposal, Curran recorded and submitted the video. |
 | Data Collection     | 06/16 - 06/24 | Braden                |                 |
 | Exp. Data Analysis  | 06/19 - 06/26 | Braden                |                 |
 | Feature Engineering | 06/21 - 07/02 | Curran                |                 |
