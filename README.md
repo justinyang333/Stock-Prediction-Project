@@ -63,7 +63,7 @@ Lastly, we decided to do some noramlization of the data.  Using sklearn and nump
 
 ### Supervised Learning Technique
 
-Our problem space necessitated the usage of a supervised, regression machine learning technique. This can be demonstrated by the manner with which we supply both the features and targets that we intend to create a viable mapping from the data to the prediction. In addition, we intend to create target values that exist on a continuous, numerical scale (stock price).
+Our problem was addresssed using supervised regression machine learning techniques. This is demonstrated by the manner with which we supply both the stock features and our target prices. Our target values exist on a continuous, numerical scale (stock price, either close or open). Methods like random forest built on simplier regression by generating a decision tree of grouped feature sets, to determine a most effective, i.e. fit to the data model.
 
 ### Feature Engineering
 
