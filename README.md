@@ -110,7 +110,7 @@ Note that High, Low, and Close appear correlated - we may therefore remove some 
 | Data Collection     | 06/16 - 06/24 | Braden                | Curran and Braden collected data, ultimately the team decided on Braden's comprehensive pull of data stock data from the MarketData API. |
 | Exp. Data Analysis  | 06/19 - 06/26 | Braden                | Braden generated data cleaning and analysis, including the plots and charts shown here. |
 | Feature Engineering | 06/21 - 07/02 | Curran                | Curran generated new data features, and did the covariance analysis. |
-| Comparing Models    | 06/23 - 07/05 | Bryce                 | Bryce calculated the RMSE and other statistics of the models as we tried and tested using them. | 
+| Comparing Models    | 06/23 - 07/05 | Bryce                 | Bryce calculated the RMSE and other statistics of the models as made by Tilman and Braden. | 
 | Midterm Report      | 07/02 - 07/07 | All members           | |
 | Implementation      | 07/07 - 07/19 | Tilman                |                 |
 | Model Tuning        | 07/14 - 07/21 | Justin                |                 |
