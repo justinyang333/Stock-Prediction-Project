@@ -15,17 +15,13 @@ def get_dataset():
     data = data[["Date", "Open", "High", "Low", "Close", "Volume"]]
     data["Date"] = pd.to_datetime(data["Date"]).astype('category')
     X, y = data[["Date", "High", "Low", "Close", "Volume"]], data[["Open"]]
-    print(X)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, train_size=0.8, shuffle=False)
     return X_train, X_test, y_train, y_test
 
 
 def run_xgboost(X_train, X_test, y_train):
-    print(1)
     dtrain_reg = xgb.DMatrix(X_train, label=y_train, enable_categorical=True)
-    print(2)
     xgb_model = xgb.train({'objective': 'reg:squarederror'}, dtrain_reg, num_boost_round=100)
-    print(3)
     y_pred = xgb_model.predict(X_test)
     return y_pred
 
