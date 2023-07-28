@@ -90,12 +90,12 @@ Note that High, Low, and Close appear correlated - we may therefore remove some 
 We developed 3 models as described in our potential models and techniques.
 
 ## Results
-<center><img src="./data/visualizations/residuals.png" height=500 width=800></center>
+<center><img src="./data/visualizations/Residuals.png" height=500 width=800></center>
 
 ### Random Forest 
 <center><img src="./data/visualizations/feature.png" height=500 width=800></center>
 <center><img src="./data/visualizations/real_Resi.png" height=500 width=800></center>
-<center><img src="./data/visualizations/real_Resi.png" height=500 width=800></center>
+<center><img src="./data/visualizations/actual_vs_pred.png" height=500 width=800></center>
 ### Naive Bayes Classification
 
 ### XGBoost
