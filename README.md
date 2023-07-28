@@ -94,6 +94,8 @@ We developed 3 models as described in our potential models and techniques.
 
 ### Random Forest 
 <center><img src="./data/visualizations/feature.png" height=500 width=800></center>
+<center><img src="./data/visualizations/real.Rpng.png" height=500 width=800></center>
+<center><img src="./data/visualizations/residuals.png" height=500 width=800></center>
 ### Naive Bayes Classification
 
 ### XGBoost
