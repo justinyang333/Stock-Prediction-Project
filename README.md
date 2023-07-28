@@ -32,7 +32,7 @@ To provide whichever model we decide to use with quality data, we will employ se
 
 ---
 
-### Dataset Collection and Cleaning
+### Dataset Cleaning
 
 As stated earlier we used [Marketdata’s API](https://docs.marketdata.app/api) to collect information on numerous different stocks detailed by [NASDAQ’s Stock Sceener](https://www.nasdaq.com/market-activity/stocks/screener).  The data was gathered by making numerous HTTP GET requests and a response was recevied, which was then saved in JSON format.  If the response was empty or an error for no available data, it was not saved to alleviate preprocessing overhead.  Once all the stock data was gathered, we had received roughly 20 years worth of daily measures for thousands of different stocks.
 
