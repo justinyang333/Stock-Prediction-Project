@@ -90,6 +90,8 @@ Further, it makes much sense to plot feature correlations and begin to explore t
 Note that High, Low, and Close appear correlated - we may therefore remove some to aid implementation. 
 
 ---
+## Random Forest 
+
 
 ## References
 
