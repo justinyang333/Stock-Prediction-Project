@@ -4,13 +4,13 @@
 
 ## Project Introduction and Background
 
-It's very difficult for hedge funds and day traders to outperform the market (i.e. stable index funds) over a long time. Stock market public accessibility is increasing with technologies like Robinhood, TD Ameritrade, Bitwallet, etc becoming more relevant. Accurate predictions of the stock market can assist in education and help advise important financial planning and decisions for companies and individuals alike.
+It's difficult and complex for hedge funds and day traders to increasingly outperform the market (i.e. stable index funds) over a long time. Stock market public accessibility is increasing with technologies like Robinhood, TD Ameritrade, Bitwallet, etc becoming more relevant. Accurate predictions of the stock market can assist in education and help advise important financial planning and decisions for companies and individuals alike. As the use of complex machine learning rises, so does its integration with financial analysis.
 
 ---
 
 ## Problem Definition
 
-Our team seeks to outperform the market (index funds: S&P 500, NASDAQ, etc.). We will implement the most recent methods of decision tree day-by-day to determine which stocks to buy or sell, given a principal amount of money, that maximizes profit and minimizes risk.
+Our team seeks to outperform the market (index funds: S&P 500, NASDAQ, etc.). We predict the weekly opening price of stocks using a random forest regression, and a regression with XGBoost. We are also classifying stocks as successful (increased open price) or not.
 
 ---
 
@@ -31,10 +31,6 @@ For our model we will consider:
 To provide whichever model we decide to use with quality data, we will employ several methods in preprocessing to aid in reducing training time while maintaining data integrity and information.  These methods include feature engineering and compression among others. Ideally this process will make the model perform equally well if not better while reducing overhead.
 
 ---
-
-## Results and Discussion
-
-In order to quantify our project results, we plan to employ the following metrics in order to fully represent our findings. When employing a regression model of Random Forest, the following metrics such as mean squared error, root mean squared error and R^2 would prove useful in forming performance benchmarks of our implementation [3]. For a Naïve Bayes classification approach, “accuracy and f-measure are used” [2] for creating performance benchmarks on the status of this approach.
 
 ### Dataset Collection and Cleaning
 
@@ -61,13 +57,7 @@ Lastly, we decided to do some noramlization of the data.  Using sklearn and nump
 <br>
 <center><img src="./data/visualizations/pre_post_normalization.png" height=400 width=800></center>
 
-### Supervised Learning Technique: XGBoost
-
-Our problem was addresssed using supervised regression machine learning techniques. This is demonstrated by the manner with which we supply both the stock features and our target prices. Our target values exist on a continuous, numerical scale (stock price, either close or open). Methods like random forest built on simplier regression by generating a decision tree of grouped feature sets, to determine a most effective, i.e. fit to the data model.  Using a roughly 2-year subset of the initial data (no additional features), we used XGBoost to provide us with predictions and then evaluated the root mean squared error between the training and the test.
-
-<center><img src="./data/visualizations/xgb_rmse.png" height=500 width=800></center>
-
-As we increased the number of boost rounds, we saw a decline in the RMSE.  However, when evaluating over the full 10 year span, our RMSE increases dramatically.  This confirms our assumption that more features would be needed to accurately train the model and prevent overfitting.
+---
 
 ### Feature Engineering
 
@@ -90,7 +80,24 @@ Further, it makes much sense to plot feature correlations and begin to explore t
 Note that High, Low, and Close appear correlated - we may therefore remove some to aid implementation. 
 
 ---
-## Random Forest 
+## Methods 
+
+We developed 3 models as described in our potential models and techniques.
+
+## Results
+
+
+### Random Forest 
+
+### Naive Bayes Classification
+
+### XGBoost
+
+Our problem was addresssed using supervised regression machine learning techniques. This is demonstrated by the manner with which we supply both the stock features and our target prices. Our target values exist on a continuous, numerical scale (stock price, either close or open). Methods like random forest built on simplier regression by generating a decision tree of grouped feature sets, to determine a most effective, i.e. fit to the data model.  Using a roughly 2-year subset of the initial data (no additional features), we used XGBoost to provide us with predictions and then evaluated the root mean squared error between the training and the test.
+
+<center><img src="./data/visualizations/xgb_rmse.png" height=500 width=800></center>
+
+As we increased the number of boost rounds, we saw a decline in the RMSE.  However, when evaluating over the full 10 year span, our RMSE increases dramatically.  This confirms our assumption that more features would be needed to accurately train the model and prevent overfitting.
 
 
 ## References
@@ -117,7 +124,7 @@ Note that High, Low, and Close appear correlated - we may therefore remove some 
 | Exp. Data Analysis  | 06/19 - 06/26 | Braden                | Braden generated data cleaning and analysis, including the plots and charts shown here. |
 | Feature Engineering | 06/21 - 07/02 | Curran                | Curran generated new data features, and did the covariance analysis. |
 | Comparing Models    | 06/23 - 07/05 | Bryce                 | Bryce calculated the RMSE and other statistics of the models as made by Tilman and Braden. | 
-| Midterm Report      | 07/02 - 07/07 | All members           | |
+| Midterm Report      | 07/02 - 07/07 | All members           | All members |
 | Implementation      | 07/07 - 07/19 | Tilman                |                 |
 | Model Tuning        | 07/14 - 07/21 | Justin                |                 |
 | Evaluation          | 07/19 - 07/24 | Curran                |                 |
