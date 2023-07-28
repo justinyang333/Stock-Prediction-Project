@@ -77,7 +77,10 @@ Further, it makes much sense to plot feature correlations and begin to explore t
 <br>
 <center><img src="./data/visualizations/feature_correlations.png" height=400 width=600></center>
 <br>
-Note that High, Low, and Close appear correlated - we may therefore remove some to aid implementation. 
+Note that High, Low, and Close appear correlated - we may therefore remove some to aid implementation.
+
+We considered that daily changes in stock features may be so minute as to overcomplicate the model, and with an excess of daily stock data over 10 years, we decided to reduce the dataset to weekly values for each of the 500 stocks.
+
 
 ---
 ## Methods 
@@ -124,11 +127,11 @@ As we increased the number of boost rounds, we saw a decline in the RMSE.  Howev
 | Exp. Data Analysis  | 06/19 - 06/26 | Braden                | Braden generated data cleaning and analysis, including the plots and charts shown here. |
 | Feature Engineering | 06/21 - 07/02 | Curran                | Curran generated new data features, and did the covariance analysis. |
 | Comparing Models    | 06/23 - 07/05 | Bryce                 | Bryce calculated the RMSE and other statistics of the models as made by Tilman and Braden. | 
-| Midterm Report      | 07/02 - 07/07 | All members           | All members |
-| Implementation      | 07/07 - 07/19 | Tilman                |                 |
-| Model Tuning        | 07/14 - 07/21 | Justin                |                 |
-| Evaluation          | 07/19 - 07/24 | Curran                |                 |
-| Final Report        | 07/22 - 07/25 | All Members           |                 |
+| Midterm Report      | 07/02 - 07/07 | All members           | All members collaborated in virtual meetings to complete the report that Braden submitted.|
+| Implementation      | 07/07 - 07/19 | Tilman                | Bryce implemented a random forest model, Justin implemented a Naive Bayes model, and Braden an XGBoost model. |
+| Model Tuning        | 07/14 - 07/21 | Justin                | Justin, Curran, and Bryce collaborated on data editing and model tuning to improve model performance. |
+| Evaluation          | 07/19 - 07/24 | Curran                | Curran and Bryce determined metrics to track, Braden executed and put into the github. |
+| Final Report        | 07/22 - 07/25 | All Members           | All members met virtually, recorded segments of the final report and contributed to submission. |
 
 ---
 
