@@ -110,6 +110,8 @@ This scatterplot exhibits the relationship between the actual observed values on
 
 We can use a supervised Naive Bayes learning model to attempt a classification of stocks as good stocks or bad stocks. This requires the seperation of our data into the company stock components which range across a decade. Our dataframe consists of the open, high, low, and close prices of the company stock data. This data is compared to the open prices of the stock on the next day, with the goal being to see how accurately we can predict this opening value of the stock with prior stock information. The overall predicted opening values of the stock the next day can then be compared to the actual opening value of the stock to determine how well our model is able to predict the market.
 
+<center><img src="./data/visualizations/nb_plot.png" height=500 width=800></center>
+
 This scatterplot shows the relationship between the actual values of the opening stock for each company vs the predicted values of the opening stock for each company. Addition data can be gathered from the Naives Bayes model, including accuracy of prediction, the means squared error, etc.
 
 ### XGBoost
